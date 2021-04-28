@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.mulun.mapper.UserMapper">
+    <insert id="insertUser">
+        INSERT INTO b_user
+        (username,
+         `password`,
+         `nickname`,
+         `gender`,
+         `phone`,
+         `email`,
+         `address`,
+         `entry_time`,
+         `state`,
+         `jurisdiction`)
+        VALUES (#{username},
+                #{password},
+                #{nickname},
+                #{gender},
+                #{phone},
+                #{email},
+                #{address},
+                #{entryTime},
+                #{state},
+                #{jurisdiction});
+    </insert>
+    <update id="updateUser">
+        UPDATE b_user
+        SET username     = #{username},
+            `password`   = #{password},
+            nickname     = #{nickname},
+            gender       = #{gender},
+            phone        = #{phone},
+            email        = #{email},
+            address      = #{address},
+            entry_time   = #{entryTime},
+            state        = #{state},
+            jurisdiction = #{jurisdiction}
+        WHERE id = #{id};
+
+    </update>
+    <delete id="deleteUserById">
+        DELETE
+        FROM b_user
+        WHERE id = #{id}
+    </delete>
+    <select id="listUsers" resultType="com.mulun.pojo.User">
+        SELECT `id`,
+               `username`,
+               `password`,
+               `nickname`,
+               `gender`,
+               `phone`,
+               `email`,
+               `address`,
+               `entry_time` AS entryTime,
+               `state`,
+               `jurisdiction`
+        FROM b_user;
+    </select>
+    <select id="getUserById" resultType="com.mulun.pojo.User">
+        SELECT `id`,
+               `username`,
+               `password`,
+               `nickname`,
+               `gender`,
+               `phone`,
+               `email`,
+               `address`,
+               `entry_time` AS entryTime,
+               `state`,
+               `jurisdiction`
+        FROM b_user
+        WHERE id = #{id};
+    </select>
+</mapper>
