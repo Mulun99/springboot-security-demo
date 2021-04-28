@@ -18,6 +18,7 @@ class SpringbootSecurityDemoApplicationTests {
     void contextLoads() throws SQLException {
         System.out.println(dataSource.getClass());
         System.out.println(dataSource.getConnection());
+        System.out.println("hello git");
     }
 
 }
