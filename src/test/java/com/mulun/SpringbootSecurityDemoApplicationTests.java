@@ -19,6 +19,7 @@ class SpringbootSecurityDemoApplicationTests {
         System.out.println(dataSource.getClass());
         System.out.println(dataSource.getConnection());
         System.out.println("hello git");
+        System.out.println("hello git3");
     }
 
 }
