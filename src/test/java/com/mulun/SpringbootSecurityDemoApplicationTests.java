@@ -26,6 +26,7 @@ class SpringbootSecurityDemoApplicationTests {
         System.out.println("github test");
         System.out.println("github test2");
         System.out.println("github test3");
+        System.out.println("github test4");
     }
 
 }
