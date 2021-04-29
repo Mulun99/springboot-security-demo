@@ -24,6 +24,8 @@ class SpringbootSecurityDemoApplicationTests {
         System.out.println("hot-fix test!");
         System.out.println("master test");
         System.out.println("github test");
+        System.out.println("github test2");
+        System.out.println("github test3");
     }
 
 }
